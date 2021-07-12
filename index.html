@@ -9,7 +9,89 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
-  <body></body>
+  <body>
+    <main class="card">
+      <img
+        src="./images/illustration-box-desktop.svg"
+        alt="Supporting image"
+        class="image-other"
+      />
+      <div class="banner">
+        <picture>
+          <source
+            media="(max-width:1100px)"
+            srcset="./images/illustration-woman-online-mobile.svg"
+          />
+          <img
+            src="./images/illustration-woman-online-desktop.svg"
+            alt="Woman online illustration"
+            class="image-main"
+          />
+        </picture>
+      </div>
+      <section class="faq" aria-label="FAQ">
+        <h1 class="faq-header">FAQ</h1>
+        <ul class="faq-items">
+          <li class="faq-item">
+            <details>
+              <summary class="faq-item__question">
+                How many team members can I invite?
+              </summary>
+              <p class="faq-item__answer">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary class="faq-item__question">
+                What is the maximum file upload size?
+              </summary>
+              <p class="faq-item__answer">
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary class="faq-item__question">
+                How do I reset my password?
+              </summary>
+              <p class="faq-item__answer">
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary class="faq-item__question">
+                Can I cancel my subscription?
+              </summary>
+              <p class="faq-item__answer">
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary class="faq-item__question">
+                Do you provide additional support?
+              </summary>
+              <p class="faq-item__answer">
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </details>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>

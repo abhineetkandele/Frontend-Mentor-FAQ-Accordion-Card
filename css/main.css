@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --appFontSize: 15px;
+  --appBorderRadius: 20px;
+
+  --colorPrimary: hsl(237, 12%, 33%);
+  --colorSecondary: hsl(240, 6%, 50%);
+
+  --colorDivider: hsl(240, 5%, 91%);
+  --colorHover: hsl(15deg 88% 68%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: var(--appFontSize);
+  font-family: "Kumbh Sans", serif;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(275, 73%, 64%),
+    hsl(243, 73%, 64%)
+  );
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 550px;
+  border-radius: var(--appBorderRadius);
+  display: grid;
+  background-color: white;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0 1fr 1.5fr;
+}
+
+.image-other {
+  z-index: 10;
+  transform: translate(-65%, 120%);
+}
+
+.banner {
+  overflow: hidden;
+  background: url("../images/bg-pattern-desktop.svg") right 6px bottom -100px no-repeat;
+}
+
+.image-main {
+  transform: translate(-80px, 25%);
+}
+
+.faq {
+  padding: 80px;
+}
+
+.faq-header {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.faq-items {
+  list-style-type: none;
+}
+
+.faq-item {
+  padding: 20px 0;
+  border-bottom: 2px solid var(--colorDivider);
+  position: relative;
+}
+
+.faq-item::after {
+  content: url("../images/icon-arrow-down.svg");
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+details[open] summary {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.faq-item__question {
+  color: var(--colorPrimary);
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.faq-item__question:hover {
+  color: var(--colorHover);
+}
+
+.faq-item__answer {
+  color: var(--colorSecondary);
+}
+
+@media screen and (max-width: 1100px) {
+  .card {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    margin: 30px;
+  }
+  .image-other {
+    display: none;
+  }
+  .banner {
+    overflow: visible;
+    background: url("../images/bg-pattern-mobile.svg") center top no-repeat;
+  }
+  picture {
+    display: flex;
+    justify-content: center;
+  }
+  .image-main {
+    transform: translate(-15px, -54%);
+  }
+  .faq {
+    padding: 0 30px 50px 30px;
+    margin-top: -50px;
+  }
+  .faq-header {
+    text-align: center;
+  }
+  .faq-item::after {
+    right: 0px;
+  }
+  .faq-item__question {
+    padding-right: 8px;
+  }
+}
